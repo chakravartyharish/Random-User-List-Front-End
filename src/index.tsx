@@ -1,19 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { Box, CircularProgress } from "@mui/material";
+import React, { Suspense, lazy } from "react";
+import ReactDOM from "react-dom";
+import { ThemeContextProvider } from "./context/ThemeContext";
+import "./i18n";
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+const App = lazy(() => import("./App"));
+
+const LoadingFallback = () => (
+  <Box
+    display="flex"
+    justifyContent="center"
+    alignItems="center"
+    height="100vh"
+  >
+    <CircularProgress />
+  </Box>
 );
-root.render(
+
+ReactDOM.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <ThemeContextProvider>
+      <Suspense fallback={<LoadingFallback />}>
+        <App />
+      </Suspense>
+    </ThemeContextProvider>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

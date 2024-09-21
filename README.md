@@ -1,46 +1,104 @@
-# Getting Started with Create React App
+# Random User List
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a React-based web application that displays a list of random users fetched from the [Random User API](https://randomuser.me/). It features a responsive design, dark/light theme toggle, multi-language support, and user detail views.
+
+## Features
+
+- Fetch and display random user data
+- Responsive design using Material-UI
+- Dark/Light theme toggle
+- Multi-language support (English, Spanish, French, German)
+- User details modal
+- Caching of user data for improved performance
+- Force refresh option to fetch new users
+
+## Technologies Used
+
+- React
+- TypeScript
+- Material-UI
+- i18next for internationalization
+- Axios for API requests
+- React Testing Library for unit tests
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or later)
+- npm (v6 or later)
+
+### Installation
+
+1. Clone the repository:
+
+   ```
+   git clone https://github.com/hkchakravarty/Random-User-List.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```
+   cd random-user-list
+   ```
+
+3. Install dependencies:
+   ```
+   npm install
+   ```
+
+### Running the Application
+
+To start the development server:
+
+```
+npm start
+```
+
+The application will be available at `http://localhost:3000`.
+
+### Building for Production
+
+To create a production build:
+
+```
+npm run build
+```
+
+The built files will be in the `build` directory.
+
+## Project Structure
+
+- `src/`
+  - `components/`: React components
+  - `context/`: React context providers
+  - `services/`: API services
+  - `types/`: TypeScript type definitions
+  - `locales/`: Translation files
+  - `App.tsx`: Main application component
+  - `index.tsx`: Entry point
+  - `i18n.ts`: Internationalization configuration
 
 ## Available Scripts
 
-In the project directory, you can run:
+- `npm start`: Runs the app in development mode
+- `npm test`: Launches the test runner
+- `npm run build`: Builds the app for production
+- `npm run eject`: Ejects from Create React App (one-way operation)
 
-### `npm start`
+## Testing
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To run the tests:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```
+npm test
+```
 
-### `npm test`
+## Internationalization
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The application supports multiple languages. To add a new language:
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Create a new JSON file in the `src/locales` directory (e.g., `it.json` for Italian)
+2. Add the translations to the new file
+3. Import the new translation file in `src/i18n.ts`
+4. Add the new language option to the `LanguageSelector` component

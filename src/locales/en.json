@@ -1,0 +1,11 @@
+{
+  "appTitle": "Random User List",
+  "refreshUsers": "Refresh Users",
+  "forceRefresh": "Force Refresh",
+  "showDetails": "Show Details",
+  "gender": "Gender",
+  "email": "Email",
+  "phone": "Phone",
+  "location": "Location",
+  "close": "Close"
+}

@@ -1,0 +1,11 @@
+{
+  "appTitle": "Liste d'Utilisateurs Aléatoires",
+  "refreshUsers": "Actualiser les Utilisateurs",
+  "forceRefresh": "Forcer l'Actualisation",
+  "showDetails": "Afficher les Détails",
+  "gender": "Sexe",
+  "email": "E-mail",
+  "phone": "Téléphone",
+  "location": "Emplacement",
+  "close": "Fermer"
+}

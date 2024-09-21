@@ -1,0 +1,11 @@
+{
+  "appTitle": "Zufällige Benutzerliste",
+  "refreshUsers": "Benutzer Aktualisieren",
+  "forceRefresh": "Aktualisierung Erzwingen",
+  "showDetails": "Details Anzeigen",
+  "gender": "Geschlecht",
+  "email": "E-Mail",
+  "phone": "Telefon",
+  "location": "Standort",
+  "close": "Schließen"
+}
